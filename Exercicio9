@@ -1,0 +1,24 @@
+9. Precedência de Operadores
+Implemente um programa que avalie a seguinte expressão lógica com base em valores fornecidos
+pelo usuário para as variáveis `a`, `b` e `c`: `(a > b || c < a) && !(b == c)`. Mostre o resultado
+(verdadeiro ou falso).
+
+import java.util.Scanner;
+
+public class verFalso {
+
+	public static void main(String[] args) {
+	    Scanner leitura = new Scanner(System.in);
+
+		System.out.println("Digite o valor de a: ");
+        int a = leitura.nextInt();
+        System.out.println("Digite o valor de b: ");
+        int b = leitura.nextInt();
+        System.out.println("Digite o valor de c: ");
+        int c = leitura.nextInt();
+        
+        boolean resultado = (a > b || c < a) && !(b == c);
+        
+        System.out.println("O resultado é: " + resultado);
+        }
+	}
