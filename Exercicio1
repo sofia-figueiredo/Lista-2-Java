@@ -1,0 +1,19 @@
+1. Estrutura `if` Simples
+Escreva um programa que peça ao usuário para inserir um número e verifique se o número é
+positivo. Caso seja, exiba uma mensagem: 'O número é positivo.'.
+
+public class PositivoNegativo {
+
+	public static void main(String[] args) {
+	    Scanner leitura = new Scanner(System.in);
+
+		System.out.println("Digite um número: ");
+        int resposta = leitura.nextInt();
+
+        if (resposta >= 0) {
+            System.out.println("Número positivo.");
+        } else if (resposta < 0){
+            System.out.println("Número negativo.");
+        }
+	}
+}
