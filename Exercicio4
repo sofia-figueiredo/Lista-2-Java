@@ -1,0 +1,27 @@
+4. Operadores Lógicos
+Escreva um programa que peça ao usuário três números e verifique se todos são positivos. Exiba
+'Todos os números são positivos' se todos forem, caso contrário, exiba 'Nem todos os números são
+positivos.'.
+
+import java.util.Scanner;
+
+public class Positivo {
+
+	public static void main(String[] args) {
+	    Scanner leitura = new Scanner(System.in);
+
+		System.out.println("Digite o primeiro número: ");
+        int resposta1 = leitura.nextInt();
+        System.out.println("Digite o segundo número: ");
+        int resposta2 = leitura.nextInt();
+        System.out.println("Digite o terceiro número: ");
+        int resposta3 = leitura.nextInt();
+
+
+        if (resposta1 >= 0 && resposta2 >= 0 && resposta3 >= 0) {
+            System.out.println("Todos os números são positivos.");
+        } else {
+            System.out.println("Nem todos os números são positivos.");
+        }
+	}
+}
