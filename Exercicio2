@@ -1,0 +1,21 @@
+2. Estrutura `if-else`
+Crie um programa que peça ao usuário para inserir sua idade. Verifique se a idade é maior ou igual
+a 18. Se for, exiba 'Você é maior de idade'; caso contrário, exiba 'Você é menor de idade.'.
+
+import java.util.Scanner;
+
+public class Maioridade {
+
+	public static void main(String[] args) {
+		Scanner leitura = new Scanner(System.in);
+
+		System.out.println("Insira a sua idade: ");
+        int idade = leitura.nextInt();
+
+        if (idade >= 18) {
+        	System.out.println("Você é maior de idade.");
+        } else {
+        	System.out.println("Você é menor de idade.");
+        }
+	}
+}
