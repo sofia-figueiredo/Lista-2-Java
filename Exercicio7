@@ -1,0 +1,24 @@
+7. Verificação de Login
+Simule um sistema de login que verifica se um nome de usuário e senha correspondem a valores
+previamente definidos (por exemplo, usuário: admin, senha: 1234). Use estruturas `if-else` para
+validar e mostrar mensagens adequadas.
+
+import java.util.Scanner;
+
+public class Login {
+
+	public static void main(String[] args) {
+		Scanner leitura = new Scanner(System.in);
+
+		System.out.println("Nome de usuário: ");
+        String usuario = leitura.nextLine();
+        System.out.println("Senha: ");
+        int senha = leitura.nextInt();
+   
+        if (usuario.equals("admin") && senha == 1234) {
+        	System.out.println("Acesso concedido.");
+        } else {
+        	System.out.println("Acesso negado.");
+        }
+	}
+}
