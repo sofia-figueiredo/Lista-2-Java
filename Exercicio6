@@ -1,0 +1,33 @@
+6. `if` Encadeado
+Crie um programa que peça ao usuário para inserir sua idade e responda se ele está em uma das
+seguintes categorias:
+- Menor de 13: Criança
+
+- Entre 13 e 19: Adolescente
+- Entre 20 e 59: Adulto
+- 60 ou mais: Idoso
+
+import java.util.Scanner;
+
+public class Idade {
+
+	public static void main(String[] args) {
+		Scanner leitura = new Scanner(System.in);
+
+		System.out.println("Qual é a sua idade? ");
+        int idade = leitura.nextInt();
+        
+        if (idade < 13){
+        	System.out.println("Criança.");
+        	
+        } else if (idade >= 13 && idade <= 19) {
+        	System.out.println("Adolescente.");
+     
+        } else if (idade >= 20 && idade <= 59) {
+        	System.out.println("Adulto.");
+        	
+        } else if (idade >= 60) {
+        	System.out.println("Idoso.");
+        }
+	}
+}
