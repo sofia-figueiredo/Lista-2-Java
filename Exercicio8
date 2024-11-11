@@ -1,0 +1,26 @@
+8. Operadores Relacionais e Lógicos
+Peça ao usuário para inserir três números e verifique se pelo menos dois deles são iguais. Exiba
+uma mensagem indicando se existe ou não números iguais.
+
+import java.util.Scanner;
+
+public class Iguais {
+
+	public static void main(String[] args) {
+	    Scanner leitura = new Scanner(System.in);
+
+		System.out.println("Digite o primeiro número: ");
+        int resposta1 = leitura.nextInt();
+        System.out.println("Digite o segundo número: ");
+        int resposta2 = leitura.nextInt();
+        System.out.println("Digite o terceiro número: ");
+        int resposta3 = leitura.nextInt();
+
+
+        if (resposta1 == resposta2 || resposta2 == resposta3 || resposta3 == resposta1) {
+            System.out.println("Existem números iguais.");
+        } else {
+            System.out.println("Não existem números iguais.");
+        }
+	}
+}
