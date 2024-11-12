@@ -1,0 +1,36 @@
+15. Classificação de Temperatura
+Escreva um programa que peça ao usuário para inserir uma temperatura em graus Celsius e
+classifique-a em:
+- Abaixo de 0: 'Muito Frio'
+- Entre 0 e 15: 'Frio'
+- Entre 16 e 25: 'Agradável'
+- Entre 26 e 35: 'Quente'
+- Acima de 35: 'Muito Quente'
+
+import java.util.Scanner;
+
+public class Temperatura {
+
+	public static void main(String[] args) {
+		Scanner leitura = new Scanner(System.in);
+
+		System.out.println("Insira a temperatura em °C: ");
+        int temperatura = leitura.nextInt();
+        
+        if (temperatura < 0){
+        	System.out.println("Muito frio.");
+        	
+        } else if (temperatura >= 0 && temperatura <= 15) {
+        	System.out.println("Frio.");
+     
+        } else if (temperatura >= 16 && temperatura <= 25) {
+        	System.out.println("Agradável.");
+        	
+        } else if (temperatura >= 26 && temperatura <= 35) {
+        	System.out.println("Quente.");
+
+        } else if (temperatura > 35) {
+        	System.out.println("Muito quente.");
+        }
+	}
+}
