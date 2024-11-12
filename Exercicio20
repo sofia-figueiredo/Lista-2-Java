@@ -1,0 +1,24 @@
+20. Validação de Entrada
+Crie um programa que leia uma nota de 0 a 10. Se a nota for inválida (fora desse intervalo), peça
+para o usuário inserir novamente até que uma nota válida seja fornecida.
+
+import java.util.Scanner;
+
+public class Entrada {
+    public static void main(String[] args) {
+        Scanner leitura = new Scanner(System.in);
+        int nota;
+
+        do {
+            System.out.print("Insira uma nota (0-10): ");
+            nota = leitura.nextInt();
+
+            if (nota < 0 || nota > 10) {
+                System.out.println("Nota inválida.0 Por favor, tente novamente.");
+            }
+            
+        } while (nota < 0 || nota > 10);
+
+        System.out.println("Nota válida!");
+    }
+}
