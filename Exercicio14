@@ -1,0 +1,26 @@
+14. Comparação de Strings
+Crie um programa que leia duas palavras do usuário e verifique se elas são iguais (ignorando
+maiúsculas/minúsculas).
+
+import java.util.Scanner;
+
+public class Comparar {
+
+	public static void main(String[] args) {
+		Scanner leitura = new Scanner(System.in);
+		
+		System.out.println("Digite a primeira palavra: ");
+		String palavra1 = leitura.nextLine();
+		System.out.println("Digite a segunda palavra: ");
+		String palavra2 = leitura.nextLine();
+		
+		String palavra1Minuscula = palavra1.toLowerCase();
+		String palavra2Minuscula = palavra2.toLowerCase();
+		
+		if (palavra1Minuscula.equals(palavra2Minuscula)) {
+            System.out.println("As palavras são iguais.");
+        } else {
+            System.out.println("As palavras são diferentes.");
+        }
+	}
+}
