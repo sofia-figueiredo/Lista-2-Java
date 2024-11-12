@@ -1,0 +1,20 @@
+13. Verificação de Intervalo
+Escreva um programa que leia um número e verifique se ele está dentro de um intervalo fechado
+[10, 20]. Utilize operadores lógicos para verificar e exiba uma mensagem apropriada.
+
+import java.util.Scanner;
+
+public class Intervalo {
+    public static void main(String[] args) {
+        Scanner leitura = new Scanner(System.in);
+
+        System.out.print("Digite um número: ");
+        int num = leitura.nextInt();
+
+        if (num >= 10 && num <= 20) {
+            System.out.println("O número está dentro do intervalo.");
+        } else {
+            System.out.println("O número está fora do intervalo.");
+        }
+    }
+}
