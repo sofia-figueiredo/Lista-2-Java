@@ -1,0 +1,47 @@
+12. Calculadora Simples
+Crie um programa que peça dois números e uma operação (+, -, *, /) e calcule o resultado. Se a
+operação for divisão, verifique se o segundo número não é zero antes de realizar a operação.
+
+import java.util.Scanner;
+
+public class Calculadora {
+	
+	public static void main(String[] args) {
+		Scanner leitura = new Scanner(System.in);
+		
+		System.out.println("Digite o primeiro número: ");
+    	double num1 = leitura.nextDouble();
+    	System.out.println("Digite o segundo número: ");
+    	double num2 = leitura.nextDouble();
+    	
+    	System.out.print("Escolha a operação (+, -, *, /): ");
+        char operacao = leitura.next().charAt(0);
+		
+        double resultado;
+
+        switch (operacao) {
+            case '+':
+                resultado = num1 + num2;
+                System.out.println(num1 + " + " + num2 + " = " + resultado);
+                break;
+            case '-':
+                resultado = num1 - num2;
+                System.out.println(num1 + " - " + num2 + " = " + resultado);
+                break;
+            case '*':
+                resultado = num1 * num2;
+                System.out.println(num1 + " * " + num2 + " = " + resultado);
+                break;
+            case '/':
+                if (num2 != 0) {
+                    resultado = num1 / num2;
+                    System.out.println(num1 + " / " + num2 + " = " + resultado);
+                } else {
+                    System.out.println("Erro! Divisão por zero não é permitida.");
+                }
+                break;
+            default:
+                System.out.println("Operação inválida.");
+        }
+	}
+}
