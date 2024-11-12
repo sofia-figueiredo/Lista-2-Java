@@ -1,0 +1,25 @@
+16. Simulação de Semáforo
+Simule o funcionamento de um semáforo, onde o usuário insere a cor atual (vermelho, amarelo ou
+verde) e o programa exibe a ação correspondente: 'Pare', 'Atenção' ou 'Siga'.
+
+import java.util.Scanner;
+
+public class Semaforo {
+
+	public static void main(String[] args) {
+		Scanner leitura = new Scanner(System.in);
+
+		System.out.println("Qual é a cor atual do semáforo?");
+        String cor = leitura.nextLine().toLowerCase();
+        
+        if (cor.equals("vermelho")){
+        	System.out.println("Pare.");
+        } else if (cor.equals("amarelo")) {
+        	System.out.println("Atenção.");
+        } else if (cor.equals("verde")) {
+        	System.out.println("Siga.");
+        } else {
+        	System.out.println("Cor inválida.");
+        }
+	}
+}
