@@ -1,0 +1,36 @@
+18. Identificação de Caracteres
+Crie um programa que peça ao usuário para inserir um caractere e verifique se ele é uma vogal (a,
+e, i, o, u), uma consoante ou outro tipo de caractere (número ou símbolo).
+
+import java.util.Scanner;
+
+public class Caractere {
+	
+	public static void main(String[] args) {
+		Scanner leitura = new Scanner(System.in);
+		
+		System.out.println("Insira um caractere: ");
+		char caractere = leitura.next().charAt(0);
+    	
+        caractere = Character.toLowerCase(caractere);
+
+        switch (caractere) {
+            case 'a':
+            case 'e':
+            case 'i':
+            case 'o':
+            case 'u':
+                System.out.println("O caractere é uma vogal.");
+                break;
+            default:
+            	if (caractere >= 'a' && caractere <= 'z') {
+                    System.out.println("O caractere é uma consoante.");
+                } else if (caractere >= '0' && caractere <= '9') {
+                    System.out.println("O caractere é um número.");
+                } else {
+                    System.out.println("O caractere é um símbolo.");
+                }
+                break;
+        }
+	}
+}
